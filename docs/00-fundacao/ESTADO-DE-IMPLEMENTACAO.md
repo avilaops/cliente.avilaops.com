@@ -1,6 +1,6 @@
 # Estado de implementação
 
-**Verificado em:** 16/09/2026
+**Verificado em:** 17/09/2026
 
 > Separa o que o regimento **promete** do que **existe**. Mesma regra da
 > política de IA da casa: uma política que descreve controles inexistentes é
@@ -37,10 +37,35 @@
 | 05 §3 | Código de atendimento | não implementado |
 | 07 | Canal de abuso lido todo dia | caixa não definida (A9) |
 | 08 §1 | Verificação em duas etapas | [confirmar se o SSO já oferece] |
-| 08 §4 | E-mails oficiais com SPF/DKIM/DMARC | [verificar domínio avilaops.com] |
+| 08 §4 | E-mails oficiais com SPF/DKIM/DMARC | **os três publicados** no `avilaops.com` (17/09/2026, ver §Autenticação de e-mail) |
 | 09 | Trilha de auditoria imutável | não implementado |
 | 09 | Termo de confidencialidade para quem acessa dados | modelo existe (`docs/juridico/NDA.md`), sem assinatura registrada |
 | interno 09 | Retaguarda com acesso de emergência | minuta de contrato existe, não assinada |
+
+## Autenticação de e-mail do `avilaops.com` (17/09/2026)
+
+Consulta pública ao DNS, feita para fechar o `[verificar]` do compromisso
+**externo 08 §4**. Só registra o que o DNS respondeu; nada aqui é configuração
+nova.
+
+| Registro | O que respondeu | Leitura |
+|---|---|---|
+| MX | `10 mail.avilaops.com` | o e-mail oficial sai do servidor da própria casa |
+| SPF (`avilaops.com`) | `v=spf1 include:_spf.avilaops.com ~all` | autoriza pelo include; termina em **softfail** |
+| SPF (`_spf.avilaops.com`) | um mecanismo `ip4` e `-all` | a lista de remetentes é fechada |
+| DKIM | seletor `avila`, CNAME para `avilaops-com.dkim.avilaops.com`, chave RSA publicada | assinatura ativa |
+| DMARC (`_dmarc.avilaops.com`) | `v=DMARC1; p=quarantine; rua=…; ruf=…; fo=1` | falha vai para a quarentena, com relatório agregado e forense |
+
+Duas observações de fato, sem recomendação:
+
+1. O SPF externo termina em `~all` (softfail) enquanto o include interno termina
+   em `-all`. Quem recebe olha o `~all` do topo: remetente não autorizado é
+   aceito e marcado, não recusado.
+2. A política DMARC está em `p=quarantine`, não em `p=reject`. Subir para
+   `reject` é decisão a tomar depois de ler os relatórios `rua`, não antes.
+
+O seletor DKIM foi encontrado por tentativa (`avila`); não existe forma de
+listar seletores pelo DNS. Se houver outro seletor em uso, ele não aparece aqui.
 
 ## Lacunas a preencher nas minutas
 
