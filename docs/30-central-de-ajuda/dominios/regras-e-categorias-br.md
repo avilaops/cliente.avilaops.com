@@ -12,6 +12,10 @@ atualizado_em: "17/09/2026"
 > Fonte: FONTES §5.3 (páginas oficiais "Regras do domínio" e "Categorias .br"
 > do Registro.br, consultadas em 17/09/2026). Valores vêm de
 > `nicbr.dominio.*`, `nicbr.titular.*` e `nicbr.categorias.*`.
+>
+> Página irmã: [Regras dos domínios genéricos](regras-dos-genericos.md). As duas
+> famílias seguem regras diferentes — a equivalência de nomes, por exemplo, só
+> existe no `.br`.
 
 Quem manda no `.br` é o Registro.br, não a Ávila. Esta página resume as regras
 dele que mudam o que você consegue registrar.

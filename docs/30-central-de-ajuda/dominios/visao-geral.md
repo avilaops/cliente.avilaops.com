@@ -4,7 +4,7 @@ area: dominios
 tipo: visao-geral
 equivalente_hetzner: "Robot/Domain Registration Robot/Overview; Managed/Domain and DNS/konsoleH Domain FAQ"
 depende_de_tela: nao
-atualizado_em: "16/09/2026"
+atualizado_em: "17/09/2026"
 ---
 
 # Domínios na Ávila: visão geral
@@ -27,6 +27,8 @@ para ninguém.
 | Como a Ávila atua | Provedor de Serviços do Registro.br | revendedora de um registrador credenciado |
 | Documento do titular | CPF ou CNPJ obrigatório | nome e contato; e-mail precisa ser confirmado |
 | Disputa sobre o nome | SACI-Adm | UDRP |
+| Nome parecido | acento, cedilha e hífen são ignorados: `avila-ops.com.br` e `avilaops.com.br` são o **mesmo** nome | são nomes **diferentes**, e cada um pode ter um dono |
+| Regras completas | [Regras e categorias do `.br`](regras-e-categorias-br.md) | [Regras dos genéricos](regras-dos-genericos.md) |
 
 ## O que você pode fazer no painel
 

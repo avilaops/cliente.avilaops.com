@@ -73,6 +73,19 @@ Regras do formato:
 | `icann.verificacaoContato.prazoDias` | 15 | vigente | F4, F5 |
 | `icann.udrp.esperaCumprimentoDiasUteis` | 10 | vigente | F22 |
 
+### Sintaxe e extensões dos genéricos
+
+| Chave | Valor vigente | Estado | Fonte |
+|---|---|---|---|
+| `generico.nome.rotuloTamanhoMax` | 63 octetos | vigente | F27 |
+| `generico.nome.nomeCompletoMax` | 255 octetos | vigente | F27 |
+| `generico.nome.caracteres` | letra, dígito e hífen (LDH) | vigente | F27 |
+| `generico.nome.primeiroCaractere` | letra ou dígito | vigente | F28 |
+| `generico.nome.hifenDuplo` | proibido na 3ª e 4ª posição, salvo prefixo `xn--` | vigente | F29 |
+| `generico.nome.equivalencia` | **não existe** (ao contrário do `.br`) | vigente | F27, contraste com F25 |
+| `generico.extensoes.httpsObrigatorio` | `.app`, `.dev` (lista HSTS preload) | vigente | F30, F31 |
+| `generico.extensoes.regrasProprias` | demais extensões do catálogo | **pendente-de-confirmacao** (depende de A1) | — |
+
 ### NIC.br / Registro.br (`.br`)
 
 | Chave | Valor vigente | Estado | Fonte |

@@ -399,3 +399,52 @@ com a regra vigente, parametrizada.
 | Três requisitos | domínio idêntico ou confusamente semelhante a marca do reclamante; titular sem direito ou interesse legítimo; registrado **e** usado de má-fé | 4(a) |
 | Resultados | limitados a cancelamento ou transferência do domínio | 4(i) |
 | Espera antes de cumprir | o registrador espera 10 dias úteis após ser informado da decisão, para eventual ação judicial | 4(k) |
+
+## 13. Genéricos: sintaxe do nome e regras por extensão
+
+### 13.1 Sintaxe (padrões IETF)
+
+| ID | Classe | Entidade | Título | Consultado | Estabilidade |
+|---|---|---|---|---|---|
+| F27 | OFICIAL | IETF | [RFC 1035, §2.3.1 e §2.3.4](https://www.rfc-editor.org/rfc/rfc1035.txt) | 17/09/2026 | estável desde 1987 |
+| F28 | OFICIAL | IETF | [RFC 1123, §2.1](https://www.rfc-editor.org/rfc/rfc1123.txt) | 17/09/2026 | estável desde 1989 |
+| F29 | OFICIAL | IETF | [RFC 5891, §4.2.3.1](https://www.rfc-editor.org/rfc/rfc5891.txt) | 17/09/2026 | estável desde 2010 |
+
+| Regra | Texto | Fonte |
+|---|---|---|
+| Tamanho do rótulo | **63 octetos ou menos**; nome inteiro, 255 octetos ou menos | F27 §2.3.4 |
+| Caracteres | letra, dígito e hífen (`LDH`) | F27 §2.3.1 |
+| Primeiro caractere | RFC 1035 exigia letra; **RFC 1123 relaxou para letra ou dígito** | F28 §2.1 |
+| Último caractere | letra ou dígito, nunca hífen | F27 §2.3.1 |
+| Hífen duplo | proibido `--` na 3ª e 4ª posições, e hífen no início ou fim | F29 §4.2.3.1 |
+| Caixa | o DNS não diferencia maiúscula de minúscula | F27 |
+
+O `--` nas posições 3 e 4 é reservado ao prefixo `xn--` dos nomes
+internacionalizados (A-label). Validador que não conhecer a exceção recusa
+domínio com acento legítimo.
+
+**Contraste com o `.br` (FONTES §5.3):** os genéricos **não têm regra de
+equivalência**. `avila-ops.com` e `avilaops.com` são nomes distintos e podem
+ter titulares diferentes. No `.br` seriam o mesmo nome. A busca de
+disponibilidade precisa tratar as duas famílias de forma diferente, e o texto
+ao cliente também.
+
+### 13.2 Extensões com regra própria
+
+| ID | Classe | Entidade | Título | Consultado | Estabilidade |
+|---|---|---|---|---|---|
+| F30 | OFICIAL | Google Registry | [get.app](https://get.app/) | 17/09/2026, renderizada em navegador | estável (a inclusão na lista HSTS preload é permanente na prática) |
+| F31 | OFICIAL | Google Registry | [get.dev](https://get.dev/) | 17/09/2026, renderizada em navegador | idem |
+
+| Extensão | Regra | Fonte |
+|---|---|---|
+| `.app` | "The .app top-level domain is included on the HSTS preload list, making HTTPS required on all connections to .app websites" | F30 |
+| `.dev` | "The .dev top-level domain is included on the HSTS preload list, making HTTPS required on all connections to .dev websites and pages" | F31 |
+
+Isso é aplicado **pelo navegador**, não pelo registro nem pela Ávila: site sem
+HTTPS válido nessas extensões não abre, e não há tela de "continuar assim
+mesmo". Vender `.app` ou `.dev` sem certificado junto entrega domínio quebrado.
+
+PENDENTE DE CONFIRMAÇÃO: as demais extensões do catálogo (a definir em A1) têm
+regra própria? Cada registro publica a sua; verificar antes de oferecer a
+extensão, do mesmo jeito que se faz com as categorias `.br` restritas.

@@ -105,6 +105,7 @@ Molde e regras em [30-central-de-ajuda/README.md](30-central-de-ajuda/README.md)
 | [Ciclo de vida do domínio](30-central-de-ajuda/dominios/ciclo-de-vida.md) | conceitos | ERRP | minuta, bloqueado A1 |
 | Pesquisar e registrar | primeiros passos | Domain Registration Robot/Getting started; Managed/Ordering Domains | espera tela |
 | [Regras e categorias do `.br`](30-central-de-ajuda/dominios/regras-e-categorias-br.md) | referência | — | escrito, com fonte oficial |
+| [Regras dos genéricos (`.com`, `.app`, `.dev`)](30-central-de-ajuda/dominios/regras-dos-genericos.md) | referência | Domain Robot FAQ | escrito, com fonte oficial; catálogo e preços dependem de A1 |
 | Dados do titular e contatos | primeiros passos | konsoleH Domain FAQ (Owner-C/Admin-C) | espera tela |
 | Confirmar e-mail do titular (genéricos) | primeiros passos | Contact information verification; Contact details verification (konsoleH) | espera tela |
 | Trocar titular | como fazer | konsoleH Domain FAQ | espera tela |
