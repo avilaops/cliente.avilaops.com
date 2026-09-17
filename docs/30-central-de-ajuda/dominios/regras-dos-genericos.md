@@ -12,9 +12,11 @@ atualizado_em: "17/09/2026"
 > Fonte: FONTES §1 a §3 (ICANN), §12 (UDRP) e §13 (sintaxe e extensões).
 > Valores vêm de `icann.*` e `generico.*`.
 >
-> Página irmã: [Regras e categorias do `.br`](regras-e-categorias-br.md). As
-> duas famílias seguem regras diferentes, e a diferença custa dinheiro se
-> passar despercebida.
+> Páginas irmãs: [Regras e categorias do `.br`](regras-e-categorias-br.md) ·
+> [Extensões de país: `.ai`, `.io` e outras](extensoes-de-pais-ai-io.md).
+>
+> **`.ai` e `.io` não estão nesta página.** Parecem genéricos, mas são
+> extensões de país, e as regras da ICANN descritas aqui não valem para elas.
 
 `.com`, `.net`, `.app`, `.dev` e as demais extensões genéricas não têm um dono
 único como o `.br`. Cada extensão tem seu próprio registro, todos sob regras da

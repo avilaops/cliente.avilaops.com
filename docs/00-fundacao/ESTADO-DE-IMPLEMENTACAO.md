@@ -87,6 +87,9 @@ Tudo que está entre colchetes nos documentos. Principais:
 | Reativação e extensão por EPP | se existem como comando do Provedor de Serviços ou só na interface do titular | `epp@registro.br` |
 | Exigência de cada categoria `.br` restrita | que documento ou autorização cada uma pede; se Profissões exigem conselho de classe | página de cada categoria no Registro.br |
 | Regra própria das demais extensões genéricas | cada registro publica a sua; verificar antes de oferecer a extensão | registro de cada extensão, após A1 |
+| Regras do `.ai` | prazo mínimo de registro, renovação, recuperação, transferência e disputa | Identity Digital / nic.ai |
+| Regras do `.io` | idem | Internet Computer Bureau / nic.io |
+| Parceiro que cubra `.ai` e `.io` | se o registrador escolhido em A1 carrega as duas, ou se será preciso mais de um canal | registradores candidatos |
 | Dispensa da trava de troca de titular | se o registrador parceiro oferece | contrato do registrador (A1) |
 | SACI-Adm, média de ~80 dias | anexar a fonte oficial citada pelo Nicolas | NIC.br |
 | MEI como Provedor de Serviços | aceitação pelo Registro.br | `epp@registro.br` + contador (A3) |

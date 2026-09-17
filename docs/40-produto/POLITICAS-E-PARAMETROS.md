@@ -86,6 +86,18 @@ Regras do formato:
 | `generico.extensoes.httpsObrigatorio` | `.app`, `.dev` (lista HSTS preload) | vigente | F30, F31 |
 | `generico.extensoes.regrasProprias` | demais extensões do catálogo | **pendente-de-confirmacao** (depende de A1) | — |
 
+### ccTLDs estrangeiros
+
+| Chave | Valor vigente | Estado | Fonte |
+|---|---|---|---|
+| `cctld.familia` | `.ai` e `.io` são ccTLD, **não** gTLD: políticas da ICANN não se aplicam por padrão | vigente | F32, F33 |
+| `cctld.ai.gestor` | Government of Anguilla; registro operado pela Identity Digital | vigente | F32, F34 |
+| `cctld.io.gestor` | Internet Computer Bureau Limited (Território Britânico do Oceano Índico) | vigente | F33 |
+| `cctld.encerramento.prazoPadraoAnos` | 5 | vigente | F35 |
+| `cctld.encerramento.prazoMaximoAnos` | 10 (5 + extensão) | vigente | F35 |
+| `cctld.io.statusEncerramento` | não iniciado | **monitorada** (§11.2) | F35, F36 |
+| `cctld.<ext>.regras` | prazo mínimo, renovação, recuperação, transferência, disputa, presença local | **pendente-de-confirmacao** por extensão | — |
+
 ### NIC.br / Registro.br (`.br`)
 
 | Chave | Valor vigente | Estado | Fonte |

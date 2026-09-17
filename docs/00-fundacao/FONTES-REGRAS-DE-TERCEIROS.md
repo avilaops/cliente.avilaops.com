@@ -388,6 +388,18 @@ com a regra vigente, parametrizada.
 | Onde mudar | parâmetros `icann.transfer.*` em `40-produto/POLITICAS-E-PARAMETROS.md`, este documento §2, contrato 02 §4 e §6, central de ajuda "Trava de transferência" |
 | Revisar em | a cada 3 meses, ou ao receber aviso do registrador parceiro |
 
+### 11.2 Futuro do `.io` (soberania do Arquipélago de Chagos)
+
+| Campo | Situação |
+|---|---|
+| O que pode mudar | se a ISO 3166-1 retirar o código do Território Britânico do Oceano Índico, o `.io` entra em encerramento pela política da IANA (F35) |
+| Estado | o Reino Unido declarou reconhecer a soberania de Maurício (F36). **Nenhuma decisão da ISO ou da IANA foi publicada** |
+| Regra operacional hoje | `.io` é extensão normal, sem restrição |
+| O que a Ávila faz | divulga o risco na página da extensão; não trata como extensão em encerramento no código |
+| Quando agir | quando a IANA publicar o início do processo e a data alvo |
+| Onde mudar | `cctld.io.*`, ajuda "Extensões de país", catálogo e página de preços |
+| Revisar em | a cada 6 meses |
+
 ## 12. ICANN: disputas de genéricos (UDRP)
 
 | ID | Classe | Entidade | Título | Consultado | Estabilidade |
@@ -448,3 +460,64 @@ mesmo". Vender `.app` ou `.dev` sem certificado junto entrega domínio quebrado.
 PENDENTE DE CONFIRMAÇÃO: as demais extensões do catálogo (a definir em A1) têm
 regra própria? Cada registro publica a sua; verificar antes de oferecer a
 extensão, do mesmo jeito que se faz com as categorias `.br` restritas.
+
+## 14. ccTLDs estrangeiros do catálogo: `.ai` e `.io`
+
+| ID | Classe | Entidade | Título | Consultado | Estabilidade |
+|---|---|---|---|---|---|
+| F32 | OFICIAL | IANA | [Delegation Record for .AI](https://www.iana.org/domains/root/db/ai.html) | 17/09/2026 | estável |
+| F33 | OFICIAL | IANA | [Delegation Record for .IO](https://www.iana.org/domains/root/db/io.html) | 17/09/2026 | estável |
+| F34 | OFICIAL | Identity Digital / Governo de Anguilla | [nic.ai, site do operador do registro](https://nic.ai/) | 17/09/2026, renderizado em navegador | variável |
+| F35 | OFICIAL | IANA | [Retirement of a Country-code Top-level Domain](https://www.iana.org/help/cctld-retirement) | 17/09/2026 | política adotada pelo Board da ICANN em 22/09/2022 |
+| F36 | OFICIAL | Governo do Reino Unido | [Joint statement between UK and Mauritius, 03/10/2024](https://www.gov.uk/government/news/joint-statement-between-uk-and-mauritius-3-october-2024) | 17/09/2026 | declaração de intenção; o tratado tem trâmite próprio |
+
+### 14.1 O enquadramento correto
+
+| Extensão | Tipo | Gestor | Fonte |
+|---|---|---|---|
+| `.ai` | **Country-code top-level domain** | Government of Anguilla; operação do registro pela Identity Digital | F32, F34 |
+| `.io` | **Country-code top-level domain** | Internet Computer Bureau Limited, no Território Britânico do Oceano Índico | F33 |
+
+**Consequência que muda o contrato:** as políticas de consenso da ICANN (ERRP,
+Transfer Policy, verificação de contato e UDRP) obrigam os **gTLDs** por força
+dos contratos daqueles registros e registradores com a ICANN. Um ccTLD não está
+sob esses contratos: cada gestor publica a própria política, e pode ou não
+adotar equivalentes.
+
+Ou seja: o que o contrato 02 diz sobre avisos de vencimento, resgate de 30
+dias, travas de 60 dias e UDRP vale para `.com`, `.app` e `.dev`, **não** para
+`.ai` e `.io` — nem para o `.br`, que já tem tratamento próprio.
+
+PENDENTE DE CONFIRMAÇÃO, por extensão, antes de entrar no catálogo: prazo
+mínimo de registro, forma de renovação, período de recuperação e taxa,
+procedimento de transferência, mecanismo de disputa e exigência de presença
+local. Ler a política publicada por cada registro.
+
+### 14.2 Encerramento de ccTLD: a regra (F35)
+
+| Regra | Texto |
+|---|---|
+| O que torna um ccTLD elegível | "ccTLD eligibility is determined by the associated country or territory being assigned in the ISO 3166-1 standard" |
+| Se o território sai da ISO 3166-1 | "their eligibility expires, and they need to be retired from use after an orderly transition period" |
+| Prazo padrão | **5 anos** |
+| Extensão do prazo | até 5 anos adicionais, **máximo de 10 anos** |
+| Adoção | Board da ICANN, 22/09/2022 |
+
+### 14.3 O caso do `.io`
+
+O `.io` está vinculado ao Território Britânico do Oceano Índico. Em comunicado
+conjunto oficial de 03/10/2024, o Reino Unido declarou: *"Under the terms of
+this treaty the United Kingdom will agree that Mauritius is sovereign over the
+Chagos Archipelago, including Diego Garcia"* (F36).
+
+O que **não** está estabelecido, e não pode ser afirmado em texto de cliente
+nem virar regra no código:
+
+- se e quando a ISO 3166-1 retira o código do território;
+- se a IANA inicia o processo de encerramento do `.io`, e a partir de que data;
+- qual prazo seria aplicado (5 anos, ou até 10 com extensão).
+
+**Postura da casa:** o `.io` continua vendável e funcionando. O risco de longo
+prazo é **divulgado ao cliente** na página da extensão, sem alarmismo e sem
+previsão de data. Nada no código trata o `.io` como extensão em encerramento
+enquanto a IANA não publicar isso. Item monitorado em §11.
