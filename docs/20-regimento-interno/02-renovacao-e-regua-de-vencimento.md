@@ -44,9 +44,25 @@ aviso pós-vencimento em até 5 dias é regra da ICANN (`icann.errp.*`).
 | Fim da reserva | lê o estado no Registro.br; se removido, marca "removido" e encerra cobrança | informar o titular que a Ávila não recupera domínio removido |
 | Processo de Liberação | nada; não é mais domínio do cliente | se o cliente quiser disputar o nome na liberação, orientar para o Registro.br |
 
-PENDENTE DE CONFIRMAÇÃO: como reativar durante a reserva quando a Ávila é o
-Provedor de Serviços (comando EPP ou interface do Registro.br) e se há custo
-extra. Até confirmar, reativação é caso manual para Operação.
+#### Extensão de pagamento: uma por domínio, para sempre (FONTES §5.1)
+
+O Registro.br republica o domínio congelado por um período curto enquanto o
+titular paga. **Só pode ser usada uma vez por domínio**, e o próprio
+Registro.br diz que é para emergência.
+
+Por isso ela **não** é botão no painel do cliente:
+
+1. Só a Operação aciona, com aprovação do Dono do serviço registrada no caso.
+2. Antes de acionar, confirmar que o pagamento está em curso e com data. Gastar
+   a extensão sem pagamento a caminho queima a única chance do cliente.
+3. Registrar no dossiê do domínio que a extensão foi usada. Da segunda vez em
+   diante a resposta é "não existe mais", e isso precisa estar visível antes de
+   alguém prometer.
+
+PENDENTE DE CONFIRMAÇÃO: a duração do "período curto"; se a reativação e a
+extensão têm comando EPP quando a Ávila é o Provedor de Serviços, ou se só
+existem na interface do titular. Até confirmar, reativação é caso manual para
+Operação.
 
 ### Genéricos (FONTES §1)
 

@@ -44,6 +44,7 @@ completo com o equivalente Hetzner de cada página: [`../INDICE.md`](../INDICE.m
 - [dominios/visao-geral.md](dominios/visao-geral.md)
 - [dominios/ciclo-de-vida.md](dominios/ciclo-de-vida.md)
 - [dominios/trava-de-transferencia.md](dominios/trava-de-transferencia.md)
+- [dominios/regras-e-categorias-br.md](dominios/regras-e-categorias-br.md)
 - [dominios/disputas-saci-adm-e-udrp.md](dominios/disputas-saci-adm-e-udrp.md)
 - [seguranca/perdi-acesso.md](seguranca/perdi-acesso.md)
 - [dns/problema-mudanca-nao-aparece.md](dns/problema-mudanca-nao-aparece.md)

@@ -1,6 +1,6 @@
 # Políticas e parâmetros
 
-**Estado:** minuta de desenho · **Atualizado em:** 16/09/2026
+**Estado:** minuta de desenho · **Atualizado em:** 17/09/2026
 
 > Todo prazo, limite ou lista que o account usa para decidir algo sobre
 > domínio vive **aqui**, com dono e fonte. Tela, e-mail, rotina e central de
@@ -79,6 +79,8 @@ Regras do formato:
 |---|---|---|---|
 | `nicbr.expiracao.reservaTitularDias` | até 90 | vigente | F10 |
 | `nicbr.expiracao.reativacao` | — | **pendente-de-confirmacao** | — |
+| `nicbr.expiracao.extensaoPagamentoUsosPorDominio` | 1 | vigente | F24 |
+| `nicbr.expiracao.extensaoPagamentoDuracao` | — | **pendente-de-confirmacao** ("período curto") | F24 |
 | `nicbr.liberacao.ciclos` | datas publicadas pelo Registro.br | consulta, não valor fixo | F11 |
 | `nicbr.epp.renovacaoAnos` | 1 a 10 | vigente | F9 |
 | `nicbr.epp.servidoresDns` | 2 a 5 | vigente | F9 |
@@ -88,7 +90,18 @@ Regras do formato:
 | `nicbr.epp.contatoNome` | mínimo 2 palavras, até 40 caracteres | vigente | F9 |
 | `nicbr.epp.nomeProvedor` | 1 palavra, até 25 caracteres, imutável | vigente | F6 |
 | `nicbr.epp.ipsAutorizados` | até 4 endereços ou blocos /26 | vigente | F6 |
-| `nicbr.saciAdm.instituicoes` | ABPI; OMPI/WIPO (lista de 05/2026) | vigente; **revisar antes de exibir** | F13, F14 |
+| `nicbr.dominio.nomeTamanho` | 2 a 26 caracteres, sem a categoria | vigente | F25 |
+| `nicbr.dominio.nomeCaracteres` | `a`–`z`, `0`–`9`, hífen e `à á â ã é ê í ó ô õ ú ü ç` | vigente | F25 |
+| `nicbr.dominio.nomeProibido` | só números; hífen no início ou no fim | vigente | F25 |
+| `nicbr.dominio.equivalencia` | compara sem acento, `ç`→`c` e sem hífen; equivalente de outro titular é recusado | vigente | F25 |
+| `nicbr.dominio.servidoresDnsParaEfetivar` | 2 respondendo com autoridade | vigente | F25 |
+| `nicbr.titular.ticketsPendentesLimite` | 3 a 200, conforme histórico do titular | vigente; fórmula não publicada | F25 |
+| `nicbr.titular.registrosNaoPagosLimite` | 3 a 200, mesmo critério | vigente; fórmula não publicada | F25 |
+| `nicbr.titular.inadimplenciaPrimeiraManutencao` | recusa novo pedido | vigente | F25 |
+| `nicbr.categorias.lista` | DPNs por grupo, com exigência de CPF ou CNPJ | vigente; **consulta, não lista fixa em tela** | F26 |
+| `nicbr.categorias.comRestricaoAdicional` | AM, FM, RADIO, EDU, G12, EMP, LEILAO, PSI, GOV, MIL, COOP, ONG, ORG (`.BR`) | vigente; exigência de cada uma **pendente-de-confirmacao** | F26 |
+| `nicbr.saciAdm.instituicoes` | ABPI; CCBC; WIPO (lista no ar em 17/09/2026) | vigente; **reler F23 antes de exibir** | F23 |
+| `nicbr.saciAdm.escopoRegistroApos` | outubro de 2010 | vigente | F23 |
 | `nicbr.saciAdm.duracaoMediaDias` | aproximadamente 74 (outro dado do NIC.br: cerca de 80, fonte a anexar) | informativo, nunca prazo | F13 |
 | `nicbr.saciAdm.prazoAcaoJudicialDiasUteis` | 15 | vigente | F13 |
 | `nicbr.saciAdm.prazoEsclarecimentoDias` | 5 | vigente | F13 |

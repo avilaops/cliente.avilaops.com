@@ -79,13 +79,30 @@ Tudo que está entre colchetes nos documentos. Principais:
 - horário de atendimento e plantão: **A6**
 - todo `[confirmar com advogado]`: revisão jurídica
 
-## PENDENTE DE CONFIRMAÇÃO em regras de terceiros (16/09/2026)
+## PENDENTE DE CONFIRMAÇÃO em regras de terceiros (17/09/2026)
 
 | Item | O que falta | Onde perguntar |
 |---|---|---|
-| Reativação de `.br` durante a reserva de 90 dias | forma (EPP ou interface) e custo quando a Ávila é provedor | `epp@registro.br` |
+| Duração da extensão de pagamento do `.br` | o "período curto" não é quantificado | `hostmaster@registro.br` |
+| Reativação e extensão por EPP | se existem como comando do Provedor de Serviços ou só na interface do titular | `epp@registro.br` |
+| Exigência de cada categoria `.br` restrita | que documento ou autorização cada uma pede; se Profissões exigem conselho de classe | página de cada categoria no Registro.br |
 | Dispensa da trava de troca de titular | se o registrador parceiro oferece | contrato do registrador (A1) |
 | SACI-Adm, média de ~80 dias | anexar a fonte oficial citada pelo Nicolas | NIC.br |
 | MEI como Provedor de Serviços | aceitação pelo Registro.br | `epp@registro.br` + contador (A3) |
-| Regras `.br` por subcategoria e documentação da troca de titular | fonte oficial | site do Registro.br |
+| Documentação exigida na troca de titular `.br` | fonte oficial | site do Registro.br |
 | Transferência de genérico acrescenta um ano | confirmar por extensão | registrador parceiro (A1) |
+
+### Fechados em 17/09/2026
+
+As páginas do Registro.br dependem de JavaScript e vinham vazias nas consultas
+anteriores. Renderizadas em navegador, fecharam quatro itens (FONTES §5.1 a
+§5.3):
+
+| Item | Resultado |
+|---|---|
+| Regras de nome do `.br` | tamanho, caracteres, hífen e **equivalência** (acento, cedilha e hífen ignorados na comparação) |
+| Limites por titular | inadimplência recusa pedido novo; tickets e registros não pagos limitados entre 3 e 200 conforme histórico |
+| Categorias `.br` | lista completa por grupo e as 13 categorias com exigência adicional |
+| Reativação durante a reserva | existe **extensão de pagamento**, uma única vez por domínio, para emergência |
+| Instituições do SACI-Adm | a página operacional lista **ABPI, CCBC e WIPO** — a instrução de não citar a CCBC caiu |
+| Escopo do SACI-Adm | só domínios registrados **após outubro de 2010** |

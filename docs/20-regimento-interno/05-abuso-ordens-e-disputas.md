@@ -37,8 +37,12 @@ titular do domínio.
 Ao orientar sobre SACI-Adm (FONTES §5.2):
 
 - dizer que é procedimento **administrativo** do NIC.br, **não arbitragem**;
-- não indicar instituição: apontar a lista vigente no site do Registro.br
-  (hoje ABPI e OMPI; **não citar CCBC**);
+- não indicar instituição: apontar a lista vigente na página do SACI-Adm no
+  Registro.br, que em 17/09/2026 traz ABPI, CCBC e WIPO. A instrução anterior
+  de não citar a CCBC caiu: vinha de um release de 2020 e a página operacional
+  a lista (FONTES §5.2);
+- confirmar que o domínio foi **registrado após outubro de 2010**; antes disso
+  o SACI-Adm não se aplica e resta a via judicial;
 - não informar preço: cada instituição tem tabela própria;
 - prazo só como média (aproximadamente 74 a 80 dias), nunca como promessa;
 - lembrar que a via judicial continua aberta.
