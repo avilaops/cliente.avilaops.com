@@ -4,7 +4,7 @@ area: dominios
 tipo: conceitos
 equivalente_hetzner: "nenhum"
 depende_de_tela: nao
-atualizado_em: "16/09/2026"
+atualizado_em: "17/09/2026"
 ---
 
 # Alguém registrou o nome da minha marca
@@ -31,9 +31,11 @@ O SACI-Adm é o **procedimento administrativo** do NIC.br para conflitos sobre
 a titularidade de domínios `.br`. Ele faz parte das regras do contrato de
 registro `.br`. **Não é arbitragem** e não é um mecanismo da ICANN.
 
+- **Vale para quais domínios:** só os `.br` **registrados depois de outubro de
+  2010**. Domínio mais antigo não entra no SACI-Adm; resta a via judicial.
 - **Quem conduz:** instituições credenciadas pelo NIC.br. Quem reclama escolhe
-  a instituição ao abrir o procedimento. A lista vigente está no site do
-  Registro.br. [lista exibida vem de configuração atualizável]
+  a instituição ao abrir o procedimento. A lista vigente está na página do
+  SACI-Adm no Registro.br. [lista exibida vem de configuração atualizável]
 - **Regras e custos:** cada instituição tem regulamento suplementar e tabela
   de custos próprios. A taxa é paga pelo reclamante diretamente à
   instituição. Não existe um preço único do SACI-Adm, nem definido pela Ávila

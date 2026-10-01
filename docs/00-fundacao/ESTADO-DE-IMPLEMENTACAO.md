@@ -1,6 +1,6 @@
 # Estado de implementação
 
-**Verificado em:** 16/09/2026
+**Verificado em:** 17/09/2026
 
 > Separa o que o regimento **promete** do que **existe**. Mesma regra da
 > política de IA da casa: uma política que descreve controles inexistentes é
@@ -37,10 +37,35 @@
 | 05 §3 | Código de atendimento | não implementado |
 | 07 | Canal de abuso lido todo dia | caixa não definida (A9) |
 | 08 §1 | Verificação em duas etapas | [confirmar se o SSO já oferece] |
-| 08 §4 | E-mails oficiais com SPF/DKIM/DMARC | [verificar domínio avilaops.com] |
+| 08 §4 | E-mails oficiais com SPF/DKIM/DMARC | **os três publicados** no `avilaops.com` (17/09/2026, ver §Autenticação de e-mail) |
 | 09 | Trilha de auditoria imutável | não implementado |
 | 09 | Termo de confidencialidade para quem acessa dados | modelo existe (`docs/juridico/NDA.md`), sem assinatura registrada |
 | interno 09 | Retaguarda com acesso de emergência | minuta de contrato existe, não assinada |
+
+## Autenticação de e-mail do `avilaops.com` (17/09/2026)
+
+Consulta pública ao DNS, feita para fechar o `[verificar]` do compromisso
+**externo 08 §4**. Só registra o que o DNS respondeu; nada aqui é configuração
+nova.
+
+| Registro | O que respondeu | Leitura |
+|---|---|---|
+| MX | `10 mail.avilaops.com` | o e-mail oficial sai do servidor da própria casa |
+| SPF (`avilaops.com`) | `v=spf1 include:_spf.avilaops.com ~all` | autoriza pelo include; termina em **softfail** |
+| SPF (`_spf.avilaops.com`) | um mecanismo `ip4` e `-all` | a lista de remetentes é fechada |
+| DKIM | seletor `avila`, CNAME para `avilaops-com.dkim.avilaops.com`, chave RSA publicada | assinatura ativa |
+| DMARC (`_dmarc.avilaops.com`) | `v=DMARC1; p=quarantine; rua=…; ruf=…; fo=1` | falha vai para a quarentena, com relatório agregado e forense |
+
+Duas observações de fato, sem recomendação:
+
+1. O SPF externo termina em `~all` (softfail) enquanto o include interno termina
+   em `-all`. Quem recebe olha o `~all` do topo: remetente não autorizado é
+   aceito e marcado, não recusado.
+2. A política DMARC está em `p=quarantine`, não em `p=reject`. Subir para
+   `reject` é decisão a tomar depois de ler os relatórios `rua`, não antes.
+
+O seletor DKIM foi encontrado por tentativa (`avila`); não existe forma de
+listar seletores pelo DNS. Se houver outro seletor em uso, ele não aparece aqui.
 
 ## Lacunas a preencher nas minutas
 
@@ -54,13 +79,34 @@ Tudo que está entre colchetes nos documentos. Principais:
 - horário de atendimento e plantão: **A6**
 - todo `[confirmar com advogado]`: revisão jurídica
 
-## PENDENTE DE CONFIRMAÇÃO em regras de terceiros (16/09/2026)
+## PENDENTE DE CONFIRMAÇÃO em regras de terceiros (17/09/2026)
 
 | Item | O que falta | Onde perguntar |
 |---|---|---|
-| Reativação de `.br` durante a reserva de 90 dias | forma (EPP ou interface) e custo quando a Ávila é provedor | `epp@registro.br` |
+| Duração da extensão de pagamento do `.br` | o "período curto" não é quantificado | `hostmaster@registro.br` |
+| Reativação e extensão por EPP | se existem como comando do Provedor de Serviços ou só na interface do titular | `epp@registro.br` |
+| Exigência de cada categoria `.br` restrita | que documento ou autorização cada uma pede; se Profissões exigem conselho de classe | página de cada categoria no Registro.br |
+| Regra própria das demais extensões genéricas | cada registro publica a sua; verificar antes de oferecer a extensão | registro de cada extensão, após A1 |
+| Regras do `.ai` | prazo mínimo de registro, renovação, recuperação, transferência e disputa | Identity Digital / nic.ai |
+| Regras do `.io` | idem | Internet Computer Bureau / nic.io |
+| Parceiro que cubra `.ai` e `.io` | se o registrador escolhido em A1 carrega as duas, ou se será preciso mais de um canal | registradores candidatos |
 | Dispensa da trava de troca de titular | se o registrador parceiro oferece | contrato do registrador (A1) |
 | SACI-Adm, média de ~80 dias | anexar a fonte oficial citada pelo Nicolas | NIC.br |
 | MEI como Provedor de Serviços | aceitação pelo Registro.br | `epp@registro.br` + contador (A3) |
-| Regras `.br` por subcategoria e documentação da troca de titular | fonte oficial | site do Registro.br |
+| Documentação exigida na troca de titular `.br` | fonte oficial | site do Registro.br |
 | Transferência de genérico acrescenta um ano | confirmar por extensão | registrador parceiro (A1) |
+
+### Fechados em 17/09/2026
+
+As páginas do Registro.br dependem de JavaScript e vinham vazias nas consultas
+anteriores. Renderizadas em navegador, fecharam quatro itens (FONTES §5.1 a
+§5.3):
+
+| Item | Resultado |
+|---|---|
+| Regras de nome do `.br` | tamanho, caracteres, hífen e **equivalência** (acento, cedilha e hífen ignorados na comparação) |
+| Limites por titular | inadimplência recusa pedido novo; tickets e registros não pagos limitados entre 3 e 200 conforme histórico |
+| Categorias `.br` | lista completa por grupo e as 13 categorias com exigência adicional |
+| Reativação durante a reserva | existe **extensão de pagamento**, uma única vez por domínio, para emergência |
+| Instituições do SACI-Adm | a página operacional lista **ABPI, CCBC e WIPO** — a instrução de não citar a CCBC caiu |
+| Escopo do SACI-Adm | só domínios registrados **após outubro de 2010** |

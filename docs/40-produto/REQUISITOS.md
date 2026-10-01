@@ -11,7 +11,7 @@
 |---|---|---|
 | **Conta** | cadastro PF/PJ, usuários [A7], dados do titular reaproveitáveis, encerramento | externo 01 §3, §10 |
 | **Segurança** | SSO, verificação em duas etapas, confirmação de ações sensíveis, sessões, código de atendimento, tokens [A8] | externo 08 |
-| **Domínios** | busca, registro, renovação automática, transferência entrada/saída, código de autorização, trava, titular, servidores DNS, DNSSEC, glue | externo 02 |
+| **Domínios** | busca, registro, renovação automática, transferência entrada/saída, código de autorização, trava, titular, servidores DNS, DNSSEC, glue. A busca valida por **família**: `.br` aplica equivalência (acento, cedilha e hífen ignorados) e categorias restritas; genéricos não têm equivalência e podem ter regra de extensão, como HTTPS obrigatório em `.app` e `.dev` | externo 02; FONTES §5.3 e §13 |
 | **DNS** | zonas, registros com validação, importação/exportação BIND, versões e restauração | externo 02 §7, 05 |
 | **Cobrança** | pagamento antes do comando, régua de renovação, reembolso automático em falha, notas | externo 06 |
 | **Avisos** | e-mail e [WhatsApp/SMS] de vencimento, ações sensíveis, incidentes | externo 02 §5, 08 §2 |

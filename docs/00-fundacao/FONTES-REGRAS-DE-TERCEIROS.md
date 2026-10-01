@@ -116,6 +116,7 @@ cláusulas do contrato. Não aparecem em F6 a F9. Perguntar a `epp@registro.br`.
 | F10 | OFICIAL | NIC.br | [Panorama Setorial da Internet, ano XVII, n. 1 (2025): Infraestrutura digital: avanços e desafios para a universalização da conectividade](https://nic.br/media/docs/publicacoes/6/20250512105226/ano-xvii-n-1-infraestrutura-digital-avancos-desafios-universalizacao-conectividade.pdf) | 16/09/2026, texto extraído do PDF | estável (o NIC.br descreve como característica do `.br` "desde o início") |
 | F11 | OFICIAL | Registro.br | [Processo de liberação: ofertas](https://registro.br/dominio/processo-de-liberacao/ofertas/) | 16/09/2026, conferido pelo Nicolas no navegador (página não extraível por ferramenta) | variável (datas dos ciclos) |
 | F12 | SECUNDÁRIA | provedores de hospedagem (Task, Locaweb, HostGator e outros) | páginas de ajuda sobre domínio congelado | 16/09/2026 | **descartada**: prazos divergentes entre si, superados por F10 |
+| F24 | OFICIAL | Registro.br | [Domínio congelado](https://registro.br/ajuda/dominio-congelado/) | 17/09/2026, renderizada em navegador | estável |
 
 Trecho de F10: *"quando o domínio expira, ele é mantido durante 90 dias na
 titularidade do cliente: deixa de funcionar, mas não fica disponível para
@@ -133,11 +134,26 @@ registro por outra pessoa."*
 terceiros são etapas diferentes; a segunda depende do ciclo do Processo de
 Liberação.
 
+#### Extensão de pagamento (F24)
+
+O Registro.br oferece uma saída de emergência para domínio congelado por falta
+de pagamento:
+
+| Regra | Texto |
+|---|---|
+| O que é | publica o domínio de novo por um período curto **enquanto o titular paga** |
+| Quantas vezes | **uma única vez** por domínio |
+| Quando usar | "somente em casos de emergência", nas palavras do Registro.br |
+| Como | formulário na página, informando o domínio |
+
+Isso é uma bala só: gastar a extensão cedo deixa o cliente sem rede de
+proteção no resto da reserva. Vira regra de operação em interno 02, não botão
+de autoatendimento.
+
 PENDENTE DE CONFIRMAÇÃO:
-- se o titular pode reativar pagando em qualquer momento dos 90 dias e se há
-  taxa extra (não está em F10);
-- como a reativação funciona quando a Ávila é o Provedor de Serviços (comando
-  EPP ou só pela interface do Registro.br).
+- a duração exata do "período curto" da extensão de pagamento (F24 não diz);
+- se a reativação e a extensão têm comando EPP próprio quando a Ávila é o
+  Provedor de Serviços, ou se só existem na interface do titular.
 
 ### 5.2 SACI-Adm
 
@@ -146,6 +162,7 @@ PENDENTE DE CONFIRMAÇÃO:
 | F13 | OFICIAL | CGI.br / NIC.br | [Caderneta SACI-Adm 15 anos (2026)](https://www.cgi.br/media/docs/publicacoes/24/pt-br/20260506121815/caderneta-SACI-15-anos-2026_digital.pdf) | 16/09/2026, texto extraído do PDF | variável (lista de instituições e média de prazo) |
 | F14 | OFICIAL | NIC.br | [Evento em São Paulo celebra 15 anos de SACI-Adm](https://nic.br/noticia/releases/evento-em-sao-paulo-celebra-15-anos-de-saci-adm-referencia-na-disputa-de-dominios-de-internet-no-brasil/), 30/09/2025 | 16/09/2026 | variável |
 | F15 | HISTÓRICA | NIC.br | [SACI-Adm completa 10 anos](https://www.nic.br/noticia/releases/sistema-de-resolucao-de-conflitos-para-nomes-de-dominios-no-br-saci-adm-completa-10-anos/) | 16/09/2026 | superada: lista ABPI, **CCBC** e WIPO e prazo médio de 45 dias |
+| F23 | OFICIAL | Registro.br | [SACI-Adm](https://registro.br/dominio/saci-adm/) — página operacional do sistema, com a lista de Instituições Credenciadas e o índice de decisões | 17/09/2026, renderizada em navegador (a página depende de JavaScript) | variável: é a lista que o Registro.br mantém no ar |
 
 | Regra | Texto | Fonte |
 |---|---|---|
@@ -153,13 +170,34 @@ PENDENTE DE CONFIRMAÇÃO:
 | Não é | arbitragem (resposta expressa do NIC.br) nem mecanismo da ICANN | F13 |
 | Papel do NIC.br | técnico e administrativo: regras gerais, supervisão das instituições, execução da decisão. Não julga | F13 |
 | Quem conduz | instituições credenciadas pelo NIC.br; o reclamante escolhe | F13 |
-| Credenciadas e ativas em 05/2026 | **ABPI** (CASD-ND) e **OMPI/WIPO** | F13, F14 |
-| CCBC | aparece só em fonte HISTÓRICA (F15). **Não apresentar como disponível** | F15 |
+| Escopo | só domínios `.br` **registrados após outubro de 2010** | F23 |
+| Instituições Credenciadas (lista no ar em 17/09/2026) | **ABPI**, **CCBC** (Câmara de Comércio Brasil-Canadá) e **WIPO** | F23 |
+| Decisões publicadas | 735 até 17/09/2026; as mais recentes listadas são todas da ABPI | F23 |
 | Regras e custos | cada instituição tem regulamento suplementar e tabela própria; a taxa é paga pelo reclamante à instituição. **Não existe preço único** do SACI-Adm | F13 |
 | Resultado | manutenção, transferência ou cancelamento do domínio | F13, F14 |
 | Esclarecimentos | 5 dias após a publicação da decisão | F13 |
 | Judiciário ou arbitragem | as partes têm **15 dias úteis** após a decisão para entrar com ação judicial ou arbitral; sem ação, o NIC.br executa a decisão | F13 |
 | Duração média | aproximadamente **74 dias**, da apresentação à decisão de mérito. É **média histórica, não prazo garantido** | F13 |
+
+#### Divergência sobre a lista de instituições, resolvida em 17/09/2026
+
+Duas fontes OFICIAIS discordam, e a diferença não é erro de uma delas:
+
+| Fonte | O que diz |
+|---|---|
+| F23, página do SACI-Adm no Registro.br | três Instituições Credenciadas: ABPI, **CCBC** e WIPO |
+| F13, caderneta do CGI.br de 05/2026 | "atualmente, estão credenciadas e ativas" ABPI e OMPI |
+
+**Qual vale:** F23, por ser a página operacional que o Registro.br mantém e
+que o reclamante consulta na hora de abrir o procedimento. A caderneta é
+material de divulgação e a palavra dela é "ativas", que não é o mesmo que
+credenciadas — as decisões recentes em F23 são todas da ABPI, o que explica a
+leitura de atividade.
+
+Consequência: a instrução anterior de **não citar a CCBC** estava apoiada em
+F15 (histórica) e caiu. Nenhum texto publicado passa a listar instituição
+fixa: a lista é o parâmetro `nicbr.saciAdm.instituicoes`, lido de F23 e
+revisado antes de exibir.
 
 PENDENTE DE CONFIRMAÇÃO: média de cerca de **80 dias** citada em outro
 material recente do NIC.br (informado pelo Nicolas, fonte não anexada). Até
@@ -168,6 +206,68 @@ NIC.br", sempre como média.
 
 **Regra de produto:** a lista de instituições nunca fica fixa em tela ou
 código. Vem de configuração atualizável (`40-produto/POLITICAS-E-PARAMETROS.md`).
+
+### 5.3 Regras de nome e categorias do `.br`
+
+| ID | Classe | Entidade | Título | Consultado | Estabilidade |
+|---|---|---|---|---|---|
+| F25 | OFICIAL | Registro.br | [Regras do domínio](https://registro.br/dominio/regras/) | 17/09/2026, renderizada em navegador | estável |
+| F26 | OFICIAL | Registro.br | [Categorias .br (DPNs)](https://registro.br/dominio/categorias/) | 17/09/2026, renderizada em navegador | variável: categorias entram (API.BR, IA.BR, SOCIAL.BR e XYZ.BR entraram em 01/09/2025) |
+
+#### Quem pode registrar (F25)
+
+Pessoa física (CPF) ou jurídica (CNPJ) **legalmente representada ou
+estabelecida no Brasil**, com cadastro regular no Ministério da Fazenda.
+
+#### Sintaxe do nome (F25)
+
+| Regra | Valor |
+|---|---|
+| Tamanho | 2 a 26 caracteres, sem contar a categoria (em `xxxx.com.br`, vale para `xxxx`) |
+| Caracteres | `a`–`z`, `0`–`9`, hífen e os acentuados `à á â ã é ê í ó ô õ ú ü ç` |
+| Proibido | só números; começar ou terminar com hífen |
+| Equivalência | na comparação, acentos viram versões sem acento, `ç` vira `c` e hífens são descartados. Nome equivalente a domínio de **outro titular** não pode ser registrado |
+| DNS | pelo menos **2 servidores respondendo com autoridade** pelo nome, para o registro se efetivar |
+
+A regra de equivalência muda a busca de disponibilidade: `avila-ops.com.br` e
+`avilaops.com.br` são o mesmo nome para o registro. A tela precisa avisar isso
+antes de o cliente pagar.
+
+#### Limites por titular (F25)
+
+| Situação | Efeito |
+|---|---|
+| Inadimplência na primeira manutenção de qualquer domínio | novo pedido é **recusado** |
+| Tickets pendentes | limite entre **3 e 200**, conforme histórico de registros e pagamentos do titular |
+| Novos registros ainda não pagos | limite entre **3 e 200**, pelo mesmo critério |
+
+O limite é variável e o Registro.br não publica a fórmula: o sistema trata a
+recusa como resposta possível e a mostra ao cliente, em vez de prometer um
+número.
+
+#### Categorias (F26)
+
+Registro.br agrupa as DPNs em: Genéricos, Cultura, Educação, Entretenimento,
+Localidades, Negócios, Pessoais, Poder Público, Profissões, Tecnologia e
+Terceiro Setor. Algumas só aceitam CPF, outras só CNPJ.
+
+Categorias marcadas com `*` na página têm **restrição adicional**: comprovação
+por documento, autorização de instituição específica, ou uso obrigatório de
+DNSSEC. Em 17/09/2026 são: `AM.BR`, `FM.BR`, `RADIO.BR`, `EDU.BR`, `G12.BR`,
+`EMP.BR`, `LEILAO.BR`, `PSI.BR`, `GOV.BR`, `MIL.BR`, `COOP.BR`, `ONG.BR` e
+`ORG.BR`.
+
+Categorias de Profissões (`ADV.BR`, `ENG.BR`, `ARQ.BR`, `MED.BR`, `GEO.BR`,
+`CNT.BR` e as demais) **não** aparecem marcadas com `*` nessa listagem.
+
+PENDENTE DE CONFIRMAÇÃO: qual documento ou autorização cada categoria marcada
+exige, e se as Profissões pedem registro no conselho de classe. F26 não detalha
+por categoria; cada uma tem página própria a ler antes de o produto oferecer a
+extensão.
+
+**Regra de produto:** a lista de categorias e suas restrições é configuração
+(`nicbr.categorias.*`), nunca `select` fixo em tela — o Registro.br acrescenta
+categoria sem avisar quem revende.
 
 ## 6. OpenSRS (candidato a registrador parceiro, A1)
 
@@ -288,6 +388,18 @@ com a regra vigente, parametrizada.
 | Onde mudar | parâmetros `icann.transfer.*` em `40-produto/POLITICAS-E-PARAMETROS.md`, este documento §2, contrato 02 §4 e §6, central de ajuda "Trava de transferência" |
 | Revisar em | a cada 3 meses, ou ao receber aviso do registrador parceiro |
 
+### 11.2 Futuro do `.io` (soberania do Arquipélago de Chagos)
+
+| Campo | Situação |
+|---|---|
+| O que pode mudar | se a ISO 3166-1 retirar o código do Território Britânico do Oceano Índico, o `.io` entra em encerramento pela política da IANA (F35) |
+| Estado | o Reino Unido declarou reconhecer a soberania de Maurício (F36). **Nenhuma decisão da ISO ou da IANA foi publicada** |
+| Regra operacional hoje | `.io` é extensão normal, sem restrição |
+| O que a Ávila faz | divulga o risco na página da extensão; não trata como extensão em encerramento no código |
+| Quando agir | quando a IANA publicar o início do processo e a data alvo |
+| Onde mudar | `cctld.io.*`, ajuda "Extensões de país", catálogo e página de preços |
+| Revisar em | a cada 6 meses |
+
 ## 12. ICANN: disputas de genéricos (UDRP)
 
 | ID | Classe | Entidade | Título | Consultado | Estabilidade |
@@ -299,3 +411,113 @@ com a regra vigente, parametrizada.
 | Três requisitos | domínio idêntico ou confusamente semelhante a marca do reclamante; titular sem direito ou interesse legítimo; registrado **e** usado de má-fé | 4(a) |
 | Resultados | limitados a cancelamento ou transferência do domínio | 4(i) |
 | Espera antes de cumprir | o registrador espera 10 dias úteis após ser informado da decisão, para eventual ação judicial | 4(k) |
+
+## 13. Genéricos: sintaxe do nome e regras por extensão
+
+### 13.1 Sintaxe (padrões IETF)
+
+| ID | Classe | Entidade | Título | Consultado | Estabilidade |
+|---|---|---|---|---|---|
+| F27 | OFICIAL | IETF | [RFC 1035, §2.3.1 e §2.3.4](https://www.rfc-editor.org/rfc/rfc1035.txt) | 17/09/2026 | estável desde 1987 |
+| F28 | OFICIAL | IETF | [RFC 1123, §2.1](https://www.rfc-editor.org/rfc/rfc1123.txt) | 17/09/2026 | estável desde 1989 |
+| F29 | OFICIAL | IETF | [RFC 5891, §4.2.3.1](https://www.rfc-editor.org/rfc/rfc5891.txt) | 17/09/2026 | estável desde 2010 |
+
+| Regra | Texto | Fonte |
+|---|---|---|
+| Tamanho do rótulo | **63 octetos ou menos**; nome inteiro, 255 octetos ou menos | F27 §2.3.4 |
+| Caracteres | letra, dígito e hífen (`LDH`) | F27 §2.3.1 |
+| Primeiro caractere | RFC 1035 exigia letra; **RFC 1123 relaxou para letra ou dígito** | F28 §2.1 |
+| Último caractere | letra ou dígito, nunca hífen | F27 §2.3.1 |
+| Hífen duplo | proibido `--` na 3ª e 4ª posições, e hífen no início ou fim | F29 §4.2.3.1 |
+| Caixa | o DNS não diferencia maiúscula de minúscula | F27 |
+
+O `--` nas posições 3 e 4 é reservado ao prefixo `xn--` dos nomes
+internacionalizados (A-label). Validador que não conhecer a exceção recusa
+domínio com acento legítimo.
+
+**Contraste com o `.br` (FONTES §5.3):** os genéricos **não têm regra de
+equivalência**. `avila-ops.com` e `avilaops.com` são nomes distintos e podem
+ter titulares diferentes. No `.br` seriam o mesmo nome. A busca de
+disponibilidade precisa tratar as duas famílias de forma diferente, e o texto
+ao cliente também.
+
+### 13.2 Extensões com regra própria
+
+| ID | Classe | Entidade | Título | Consultado | Estabilidade |
+|---|---|---|---|---|---|
+| F30 | OFICIAL | Google Registry | [get.app](https://get.app/) | 17/09/2026, renderizada em navegador | estável (a inclusão na lista HSTS preload é permanente na prática) |
+| F31 | OFICIAL | Google Registry | [get.dev](https://get.dev/) | 17/09/2026, renderizada em navegador | idem |
+
+| Extensão | Regra | Fonte |
+|---|---|---|
+| `.app` | "The .app top-level domain is included on the HSTS preload list, making HTTPS required on all connections to .app websites" | F30 |
+| `.dev` | "The .dev top-level domain is included on the HSTS preload list, making HTTPS required on all connections to .dev websites and pages" | F31 |
+
+Isso é aplicado **pelo navegador**, não pelo registro nem pela Ávila: site sem
+HTTPS válido nessas extensões não abre, e não há tela de "continuar assim
+mesmo". Vender `.app` ou `.dev` sem certificado junto entrega domínio quebrado.
+
+PENDENTE DE CONFIRMAÇÃO: as demais extensões do catálogo (a definir em A1) têm
+regra própria? Cada registro publica a sua; verificar antes de oferecer a
+extensão, do mesmo jeito que se faz com as categorias `.br` restritas.
+
+## 14. ccTLDs estrangeiros do catálogo: `.ai` e `.io`
+
+| ID | Classe | Entidade | Título | Consultado | Estabilidade |
+|---|---|---|---|---|---|
+| F32 | OFICIAL | IANA | [Delegation Record for .AI](https://www.iana.org/domains/root/db/ai.html) | 17/09/2026 | estável |
+| F33 | OFICIAL | IANA | [Delegation Record for .IO](https://www.iana.org/domains/root/db/io.html) | 17/09/2026 | estável |
+| F34 | OFICIAL | Identity Digital / Governo de Anguilla | [nic.ai, site do operador do registro](https://nic.ai/) | 17/09/2026, renderizado em navegador | variável |
+| F35 | OFICIAL | IANA | [Retirement of a Country-code Top-level Domain](https://www.iana.org/help/cctld-retirement) | 17/09/2026 | política adotada pelo Board da ICANN em 22/09/2022 |
+| F36 | OFICIAL | Governo do Reino Unido | [Joint statement between UK and Mauritius, 03/10/2024](https://www.gov.uk/government/news/joint-statement-between-uk-and-mauritius-3-october-2024) | 17/09/2026 | declaração de intenção; o tratado tem trâmite próprio |
+
+### 14.1 O enquadramento correto
+
+| Extensão | Tipo | Gestor | Fonte |
+|---|---|---|---|
+| `.ai` | **Country-code top-level domain** | Government of Anguilla; operação do registro pela Identity Digital | F32, F34 |
+| `.io` | **Country-code top-level domain** | Internet Computer Bureau Limited, no Território Britânico do Oceano Índico | F33 |
+
+**Consequência que muda o contrato:** as políticas de consenso da ICANN (ERRP,
+Transfer Policy, verificação de contato e UDRP) obrigam os **gTLDs** por força
+dos contratos daqueles registros e registradores com a ICANN. Um ccTLD não está
+sob esses contratos: cada gestor publica a própria política, e pode ou não
+adotar equivalentes.
+
+Ou seja: o que o contrato 02 diz sobre avisos de vencimento, resgate de 30
+dias, travas de 60 dias e UDRP vale para `.com`, `.app` e `.dev`, **não** para
+`.ai` e `.io` — nem para o `.br`, que já tem tratamento próprio.
+
+PENDENTE DE CONFIRMAÇÃO, por extensão, antes de entrar no catálogo: prazo
+mínimo de registro, forma de renovação, período de recuperação e taxa,
+procedimento de transferência, mecanismo de disputa e exigência de presença
+local. Ler a política publicada por cada registro.
+
+### 14.2 Encerramento de ccTLD: a regra (F35)
+
+| Regra | Texto |
+|---|---|
+| O que torna um ccTLD elegível | "ccTLD eligibility is determined by the associated country or territory being assigned in the ISO 3166-1 standard" |
+| Se o território sai da ISO 3166-1 | "their eligibility expires, and they need to be retired from use after an orderly transition period" |
+| Prazo padrão | **5 anos** |
+| Extensão do prazo | até 5 anos adicionais, **máximo de 10 anos** |
+| Adoção | Board da ICANN, 22/09/2022 |
+
+### 14.3 O caso do `.io`
+
+O `.io` está vinculado ao Território Britânico do Oceano Índico. Em comunicado
+conjunto oficial de 03/10/2024, o Reino Unido declarou: *"Under the terms of
+this treaty the United Kingdom will agree that Mauritius is sovereign over the
+Chagos Archipelago, including Diego Garcia"* (F36).
+
+O que **não** está estabelecido, e não pode ser afirmado em texto de cliente
+nem virar regra no código:
+
+- se e quando a ISO 3166-1 retira o código do território;
+- se a IANA inicia o processo de encerramento do `.io`, e a partir de que data;
+- qual prazo seria aplicado (5 anos, ou até 10 com extensão).
+
+**Postura da casa:** o `.io` continua vendável e funcionando. O risco de longo
+prazo é **divulgado ao cliente** na página da extensão, sem alarmismo e sem
+previsão de data. Nada no código trata o `.io` como extensão em encerramento
+enquanto a IANA não publicar isso. Item monitorado em §11.

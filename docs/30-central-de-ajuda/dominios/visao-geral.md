@@ -4,7 +4,7 @@ area: dominios
 tipo: visao-geral
 equivalente_hetzner: "Robot/Domain Registration Robot/Overview; Managed/Domain and DNS/konsoleH Domain FAQ"
 depende_de_tela: nao
-atualizado_em: "16/09/2026"
+atualizado_em: "17/09/2026"
 ---
 
 # Domínios na Ávila: visão geral
@@ -19,7 +19,7 @@ aparece só como contato técnico. Você pode levar o domínio para outro
 provedor quando quiser, gerando o código de autorização no painel, sem pedir
 para ninguém.
 
-## `.br` e genéricos funcionam diferente
+## Três famílias, não duas
 
 | | `.com.br`, `.net.br` e demais `.br` | `.com`, `.app`, `.dev` e demais |
 |---|---|---|
@@ -27,6 +27,14 @@ para ninguém.
 | Como a Ávila atua | Provedor de Serviços do Registro.br | revendedora de um registrador credenciado |
 | Documento do titular | CPF ou CNPJ obrigatório | nome e contato; e-mail precisa ser confirmado |
 | Disputa sobre o nome | SACI-Adm | UDRP |
+| Nome parecido | acento, cedilha e hífen são ignorados: `avila-ops.com.br` e `avilaops.com.br` são o **mesmo** nome | são nomes **diferentes**, e cada um pode ter um dono |
+| Regras completas | [Regras e categorias do `.br`](regras-e-categorias-br.md) | [Regras dos genéricos](regras-dos-genericos.md) |
+
+**E há uma terceira família.** `.ai` e `.io` parecem genéricos, mas são
+extensões de país como o `.br` — de Anguilla e do Território Britânico do
+Oceano Índico. As regras da ICANN da coluna da direita **não valem** para elas,
+e o `.io` tem um risco de longo prazo que vale conhecer antes de escolher:
+[Extensões de país](extensoes-de-pais-ai-io.md).
 
 ## O que você pode fazer no painel
 
