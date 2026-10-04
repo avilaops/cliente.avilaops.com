@@ -1,6 +1,6 @@
 # Estado de implementação
 
-**Verificado em:** 17/09/2026
+**Verificado em:** 04/10/2026
 
 > Separa o que o regimento **promete** do que **existe**. Mesma regra da
 > política de IA da casa: uma política que descreve controles inexistentes é
@@ -10,7 +10,9 @@
 
 | Item | Estado | Evidência |
 |---|---|---|
-| Repositório/código do account.avilaops.com | **não existe** | só `docs/` |
+| Código do portal do cliente | **começou**, dentro do `app.avilaops.com` em `/portal` (não há aplicação própria neste repositório) | `app.avilaops.com` PR #76, `docs/portal-dominios-dns.md` |
+| Página do domínio para o cliente, com vencimento e fonte | existe no código, **não publicada** | `app.avilaops.com/src/app/portal/dominios/[fqdn]` |
+| Edição de DNS pelo titular (D5) | existe no código, **não publicada**. Só o dono do negócio edita, com validação antes de gravar (SPF duplicado, CNAME dividindo nome, MX para IP) | `app.avilaops.com/src/lib/dominios/dns/validacao.ts` |
 | Subdomínio `account.avilaops.com` publicado | não verificado | — |
 | Conta de revendedor de genéricos | **não existe** | nenhuma credencial em `docs/credenciais/` |
 | Homologação Registro.br como Provedor de Serviços | **não existe** | idem |
@@ -38,7 +40,7 @@
 | 07 | Canal de abuso lido todo dia | caixa não definida (A9) |
 | 08 §1 | Verificação em duas etapas | [confirmar se o SSO já oferece] |
 | 08 §4 | E-mails oficiais com SPF/DKIM/DMARC | **os três publicados** no `avilaops.com` (17/09/2026, ver §Autenticação de e-mail) |
-| 09 | Trilha de auditoria imutável | não implementado |
+| 09 | Trilha de auditoria imutável | **parcial**: alteração de DNS grava quem, quando, antes, depois e origem (cliente ou equipe) em `operations.audit_events`, mas a tabela não é imutável |
 | 09 | Termo de confidencialidade para quem acessa dados | modelo existe (`docs/juridico/NDA.md`), sem assinatura registrada |
 | interno 09 | Retaguarda com acesso de emergência | minuta de contrato existe, não assinada |
 

@@ -52,7 +52,7 @@ repositório tem só a base documental; o painel ainda não foi construído.
 | Regimento externo (termos, contrato, privacidade, SLA…) | 📝 minuta, aguardando revisão jurídica |
 | Regimento interno (renovação, transferências, abuso, auditoria…) | 📝 minuta |
 | Central de ajuda (domínios, DNS, segurança) | 📝 conceitos e referências escritos; os passo a passo esperam a tela existir |
-| Código do painel | ⏳ não iniciado |
+| Código do painel | 🚧 começou no `app.avilaops.com`, em `/portal`: página do domínio e DNS editável pelo titular (ainda não publicado) |
 | Login | ✅ o SSO já existe em `auth.avilaops.com` |
 
 O quadro completo, item por item e com evidência, está em
