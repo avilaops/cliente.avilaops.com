@@ -1,6 +1,6 @@
 # Estado de implementação
 
-**Verificado em:** 04/10/2026
+**Verificado em:** 05/10/2026
 
 > Separa o que o regimento **promete** do que **existe**. Mesma regra da
 > política de IA da casa: uma política que descreve controles inexistentes é
@@ -12,6 +12,7 @@
 |---|---|---|
 | Código do portal do cliente | **começou**, dentro do `app.avilaops.com` em `/portal` (não há aplicação própria neste repositório) | `app.avilaops.com` PR #76, `docs/portal-dominios-dns.md` |
 | Página do domínio para o cliente, com vencimento e fonte | existe no código, **não publicada** | `app.avilaops.com/src/app/portal/dominios/[fqdn]` |
+| Exportação da zona em BIND pelo titular | existe no código, **não publicada**: zona atual e qualquer versão, também depois que o DNS sai da Ávila | `app.avilaops.com/src/lib/dominios/dns/bind.ts` |
 | Edição de DNS pelo titular (D5) | existe no código, **não publicada**. Só o dono do negócio edita, com validação antes de gravar (SPF duplicado, CNAME dividindo nome, MX para IP) | `app.avilaops.com/src/lib/dominios/dns/validacao.ts` |
 | Subdomínio `account.avilaops.com` publicado | não verificado | — |
 | Conta de revendedor de genéricos | **não existe** | nenhuma credencial em `docs/credenciais/` |
@@ -33,7 +34,7 @@
 |---|---|---|
 | 02 §5 | Régua de avisos de vencimento | não implementado |
 | 02 §6.2 | Código de autorização self-service | não implementado |
-| 02 §7 | Versões de zona restauráveis | não implementado |
+| 02 §7 | Versões de zona restauráveis | existe no código, **não publicado**: uma versão a cada alteração, restauração com diferença mostrada antes e conferida depois, exportação em BIND (`app.avilaops.com` #77 e #80). Depende da migração `20261004230000_versoes_de_zona_dns`, ainda não aplicada em produção |
 | 04 §5 | Pedidos de titular em 15 dias | processo manual possível hoje |
 | 05 §1 | Disponibilidade DNS | sem infraestrutura |
 | 05 §3 | Código de atendimento | não implementado |
