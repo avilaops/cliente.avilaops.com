@@ -1,6 +1,6 @@
 # Índice e checklist de cobertura
 
-**Atualizado em:** 17/09/2026
+**Atualizado em:** 06/10/2026
 
 Mapa de toda a documentação do account.avilaops.com. A coluna **Hetzner**
 aponta a página equivalente no clone em `docs/Docs/docs.avilaops.com/`, que é
@@ -24,7 +24,7 @@ de decisão em `DECISOES.md`) · `fora` (não se aplica).
 | [Estado de implementação](00-fundacao/ESTADO-DE-IMPLEMENTACAO.md) | escrito |
 | [Regras de terceiros com fonte](00-fundacao/FONTES-REGRAS-DE-TERCEIROS.md) | escrito, revalidar antes de publicar |
 | [Requisitos do produto](40-produto/REQUISITOS.md) | minuta |
-| [Políticas e parâmetros](40-produto/POLITICAS-E-PARAMETROS.md) | minuta de desenho |
+| [Políticas e parâmetros](40-produto/POLITICAS-E-PARAMETROS.md) | minuta de desenho; camada implementada no app (PR #84), políticas pendentes de confirmação |
 
 ## 2. Regimento externo (público, `/legal`)
 

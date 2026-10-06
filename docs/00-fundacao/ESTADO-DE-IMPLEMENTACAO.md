@@ -1,6 +1,6 @@
 # Estado de implementação
 
-**Verificado em:** 05/10/2026
+**Verificado em:** 06/10/2026
 
 > Separa o que o regimento **promete** do que **existe**. Mesma regra da
 > política de IA da casa: uma política que descreve controles inexistentes é
@@ -14,6 +14,7 @@
 | Página do domínio para o cliente, com vencimento e fonte | existe no código, **não publicada** | `app.avilaops.com/src/app/portal/dominios/[fqdn]` |
 | Exportação da zona em BIND pelo titular | existe no código, **não publicada**: zona atual e qualquer versão, também depois que o DNS sai da Ávila | `app.avilaops.com/src/lib/dominios/dns/bind.ts` |
 | Edição de DNS pelo titular (D5) | existe no código, **não publicada**. Só o dono do negócio edita, com validação antes de gravar (SPF duplicado, CNAME dividindo nome, MX para IP) | `app.avilaops.com/src/lib/dominios/dns/validacao.ts` |
+| Camada de políticas e parâmetros (NF13) | existe no código, **não publicada**: versões só acrescentadas, valor pela data do evento, escopo mais específico vence, política do produto recusada se menos protetora que a regra externa. Regras externas semeadas como vigentes, com fonte; **as 14 políticas do produto entram pendentes** (valor proposto) até o dono confirmar na tela | `app.avilaops.com` PR #84, `docs/politicas-e-parametros.md`. Depende da migração `20261006120000_parametros_de_politica` |
 | Subdomínio `account.avilaops.com` publicado | não verificado | — |
 | Conta de revendedor de genéricos | **não existe** | nenhuma credencial em `docs/credenciais/` |
 | Homologação Registro.br como Provedor de Serviços | **não existe** | idem |
@@ -34,7 +35,7 @@
 |---|---|---|
 | 02 §5 | Régua de avisos de vencimento | não implementado |
 | 02 §6.2 | Código de autorização self-service | não implementado |
-| 02 §7 | Versões de zona restauráveis | existe no código, **não publicado**: uma versão a cada alteração, restauração com diferença mostrada antes e conferida depois, exportação em BIND (`app.avilaops.com` #77 e #80). Depende da migração `20261004230000_versoes_de_zona_dns`, ainda não aplicada em produção |
+| 02 §7 | Versões de zona restauráveis | existe no código, **não publicado**: uma versão a cada alteração, restauração com diferença mostrada antes e conferida depois, exportação em BIND (`app.avilaops.com` #77 e #80). Depende da migração `20261004230000_versoes_de_zona_dns`, ainda não aplicada em produção. Retenção: lê `produto.dns.versoesRetencaoDias` (#84); enquanto pendente, nada é descartado |
 | 04 §5 | Pedidos de titular em 15 dias | processo manual possível hoje |
 | 05 §1 | Disponibilidade DNS | sem infraestrutura |
 | 05 §3 | Código de atendimento | não implementado |
