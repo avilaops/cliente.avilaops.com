@@ -6,8 +6,12 @@
 > domínio vive **aqui**, com dono e fonte. Tela, e-mail, rotina e central de
 > ajuda leem o parâmetro; ninguém escreve `60`, `90` ou `30` solto no código.
 >
-> Os nomes de chave são **conceituais**. Ainda não há código; quando houver,
-> adaptar à arquitetura escolhida sem perder as três camadas nem o histórico.
+> Desde 06/10/2026 há código: `app.avilaops.com` (`src/lib/parametros`, tela
+> em `/hub-social/dominios/parametros`, PR #84). Lá estão as chaves com valor
+> numérico ou sim/não das §3 e §5; as de texto, lista regulatória e
+> fornecedor (§4) entram quando o código que as lê existir. Os valores da §5
+> foram semeados como **pendentes de confirmação**: até o dono confirmar, não
+> decidem nada.
 
 ## 1. Três camadas
 
